@@ -37,10 +37,36 @@
     font-size: 16px;
     color: #fff;
 }
-  nav {
+nav {
     background-color: #000;
     padding: 25px;
     border-bottom: 0.3px solid white; /* Ajoute une fine bordure blanche en bas */
+}
+
+footer {
+  background-color: #000;
+  padding: 25px;
+  border-top: 0.3px solid white; /* Ajoute une fine bordure blanche en bas */
+}
+
+.socials {
+  width: 30px;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 250px;
+  height: auto;
 }
 
 /*CSS du menu*/

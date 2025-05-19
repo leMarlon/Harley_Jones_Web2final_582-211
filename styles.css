@@ -110,7 +110,7 @@ footer ul {
 }
 
 /*CSS du menu*/
-header nav:first-of-type ul {
+nav ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -118,19 +118,19 @@ header nav:first-of-type ul {
     justify-content: space-between;
 }
 
-nav nav:first-of-type li {
+nav li {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-nav nav:first-of-type a {
+nav a {
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
 
-nav nav:first-of-type img {
+nav img {
     width: 30px;
     height: auto;
 }
@@ -149,9 +149,3 @@ ul {
   }
 }
 
-.burger nav {
-  background-color: #000;
-  padding: 25px;
-  border-bottom: 0.3px solid white;
-  flex-direction: column;
-}

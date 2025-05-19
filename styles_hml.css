@@ -1,91 +1,95 @@
+/*
+.intro : section encadrée avec texte + image centrée (présentation ou intro)
+*/
 .intro {
-    border: 0.5px solid white;
-    border-radius: 30px;
-    margin: 30px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
+    border: 0.5px solid white; /* contour blanc très fin */
+    border-radius: 30px;       /* coins arrondis */
+    margin: 30px 50px;         /* espacement extérieur */
+    display: flex;             /* mise en page en flexbox */
+    flex-direction: column;    /* empile les enfants verticalement */
+    justify-content: center;   /* centre le contenu verticalement */
+    padding: 30px;             /* espacement intérieur */
 }
 
-.intro img  {
+/* Image dans la section .intro */
+.intro img {
     display: block;
-    margin: auto;
-    width: 45%;
-}
-.intro p  {
-    display: block;
-    margin: auto;
-    width: 50%;
-    display: block;
-    margin: 40px auto;
+    margin: auto;              /* centre l'image */
+    width: 45%;                /* image prend 45% de la largeur du conteneur */
 }
 
+/* Paragraphe dans .intro */
+.intro p {
+    display: block;
+    margin: 40px auto;         /* centre le texte avec espace vertical */
+    width: 50%;                /* limite la largeur à 50% */
+}
 
+/* Images dans la section .websites */
 .websites img {
     display: block;
-    margin: 40px auto;
+    margin: 40px auto;         /* centre chaque image avec marge */
 }
-.confrindie {
+
+/* Logos interactifs avec effet au survol */
+.confrindie, .guilde {
     width: 35%;
-    transition: transform 0.3s ease;
-}
-.guilde {
-    width: 35%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* effet fluide sur transformation */
 }
 
-.confrindie:hover {
-  transform: scale(1.05);
+.confrindie:hover, .guilde:hover {
+    transform: scale(1.05);    /* zoom léger au survol */
 }
 
-.guilde:hover {
-  transform: scale(1.05);
-}
-
+/* Bouton d'accès Steam */
 .disponible {
-  width: 45%;
-  transition: transform 0.3s ease;
+    width: 45%;
+    transition: transform 0.3s ease;
 }
 
 .disponible:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
+/* Logo principal en haut de section */
 .logo-header {
     width: 60%;
 }
 
+/* Image de gameplay */
 .gameplay1 {
     width: 70%;
 }
 
+/* Centrer les sous-titres */
 h2 {
     text-align: center;
 }
 
+/* Bloc fondateur : image + texte alignés horizontalement */
 .founder {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-around; /* espace égal autour des éléments */
+    align-items: center;           /* alignement vertical centré */
 }
+
 .founder img {
     width: 40%;
     height: auto;
 }
 
 .founder-text {
-    flex-direction: column;
-    justify-content: center;
-
+    flex-direction: column;        /* empile les paragraphes */
+    justify-content: center;      /* centre le contenu verticalement */
 }
 
 .founder-text p:first-of-type {
-  font-weight: bold;
+    font-weight: bold;            /* met en gras le 1er paragraphe */
 }
 
+/* Bloc contact stylisé */
 .contact p {
-    text-decoration: underline;
+    text-decoration: underline;   /* souligne tout le texte */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,15 +100,17 @@ h2 {
     font-weight: bold;
 }
 
+/* Bloc infolettre : deux colonnes (texte + image) */
 .newsletter {
     background-color: #1B1B1B;
     width: 60%;
     height: 800px;
-    display: flex;
-    margin:auto;
+    display: flex;                /* deux colonnes */
+    margin: auto;
     padding: 20px;
 }
 
+/* Partie gauche de la newsletter (texte, input, bouton) */
 .invite {
     display: flex;
     flex-direction: column;
@@ -113,8 +119,7 @@ h2 {
     padding: 20px;
 }
 
-
-
+/* Partie droite (image d'illustration) */
 .invite-img img {
     justify-content: flex-end;
     align-items: center;
@@ -123,30 +128,34 @@ h2 {
     max-height: 800px;
 }
 
+/* Bouton d'inscription */
 .invite button {
-  background-color: #FFA909;
-  border: none;
-  color: white;
-  padding: 15px 68px;
-  font-weight: bold;
-  border-radius: 5px;
-  margin: 10px;
+    background-color: #FFA909; /* jaune/orangé */
+    border: none;
+    color: white;
+    padding: 15px 68px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
 }
 
+/* Champ de saisie d'email */
 .invite input {
-  text-align: center;
-  background: none;
-  border: 1px solid white;
-  color: white;
-  padding: 15px 40px;
-  font-weight: normal;
-  margin: 10px;
+    text-align: center;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 40px;
+    font-weight: normal;
+    margin: 10px;
 }
 
-
+/* =============================== */
+/* ADAPTATION RESPONSIVE TABLETTE */
+/* =============================== */
 @media screen and (max-width: 768px) {
   .founder {
-    flex-direction: column;
+    flex-direction: column;    /* empile image et texte */
     align-items: center;
     text-align: center;
     padding: 20px;
@@ -156,27 +165,29 @@ h2 {
     width: 80%;
     margin-bottom: 20px;
   }
-  .guilde {
-    width: 80%;
-  }
-  .intro img {
-    width: 90%;
+
+  .guilde, .confrindie {
+    width: 80%;                /* agrandit logos partenaires */
   }
 
-  .confrindie {
-    width: 80%;
+  .intro img {
+    width: 90%;                /* image principale plus large */
   }
 
   .founder-text {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 10px;           /* un peu d'air sur les côtés */
   }
 }
 
+/* =============================== */
+/* ADAPTATION RESPONSIVE MOBILE   */
+/* =============================== */
 @media screen and (max-width: 600px) {
   .invite-img img {
-    display:none;
+    display: none;             /* cache l’image pour garder juste le texte */
   }
+
   .invite {
     flex-direction: column;
     justify-content: center;

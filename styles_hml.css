@@ -11,24 +11,174 @@
 .intro img  {
     display: block;
     margin: auto;
-    width: 25%;
+    width: 45%;
 }
 .intro p  {
     display: block;
     margin: auto;
     width: 50%;
-    
-}
-
-.studios img {
     display: block;
     margin: 40px auto;
-    width: 25%;
-    
 }
 
-h1 {
+
+.websites img {
+    display: block;
+    margin: 40px auto;
+}
+.confrindie {
+    width: 35%;
+    transition: transform 0.3s ease;
+}
+.guilde {
+    width: 35%;
+    transition: transform 0.3s ease;
+}
+
+.confrindie:hover {
+  transform: scale(1.05);
+}
+
+.guilde:hover {
+  transform: scale(1.05);
+}
+
+.disponible {
+  width: 45%;
+  transition: transform 0.3s ease;
+}
+
+.disponible:hover {
+  transform: scale(1.05);
+}
+
+.logo-header {
+    width: 60%;
+}
+
+.gameplay1 {
+    width: 70%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.founder {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.founder img {
+    width: 40%;
+    height: auto;
+}
+
+.founder-text {
+    flex-direction: column;
     justify-content: center;
-    margin: 70px;
+
+}
+
+.founder-text p:first-of-type {
+  font-weight: bold;
+}
+
+.contact p {
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p:first-of-type {
+    font-weight: bold;
+}
+
+.newsletter {
+    background-color: #1B1B1B;
+    width: 60%;
+    height: 800px;
+    display: flex;
+    margin:auto;
+    padding: 20px;
+}
+
+.invite {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.invite-img img {
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+}
+
+.invite button {
+  background-color: #FFA909;
+  border: none;
+  color: white;
+  padding: 15px 68px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.invite input {
+  text-align: center;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 40px;
+  font-weight: normal;
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .founder {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .founder img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .guilde {
+    width: 80%;
+  }
+  .intro img {
+    width: 90%;
+  }
+
+  .confrindie {
+    width: 80%;
+  }
+
+  .founder-text {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .invite-img img {
+    display:none;
+  }
+  .invite {
+    flex-direction: column;
+    justify-content: center;
+  }
 }

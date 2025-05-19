@@ -16,12 +16,46 @@
     padding: 0;
   }
 
+  header a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.r-sociaux {
+  transition: transform 0.3s ease;
+}
+
+.r-sociaux:hover {
+  transform: scale(1.10);
+}
+
+  button {
+    font-family: "Barlow", sans-serif;
+  }
+
+  input {
+    font-family: "Barlow", sans-serif;
+  }
+
+.logo-header {
+  width: 50%;
+  height: auto;
+}
 
 
   h1 {
     color:var(--white);
     font-size: 100;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin: 70px;
   }
 
   h2 {
@@ -55,6 +89,11 @@ footer {
   height: auto;
   display: flex;
   justify-content: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.socials:hover {
+  transform: scale(1.10);
 }
 
 footer ul {
@@ -100,9 +139,13 @@ nav img {
   width: 60px;
   height: auto;
 }
-
+ul {
+  padding: 0px;
+ }
+ 
 @media (max-width: 600px) {
   .logo {
       width: 40px;
   }
 }
+ 

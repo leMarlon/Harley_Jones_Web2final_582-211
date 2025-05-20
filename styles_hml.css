@@ -151,7 +151,7 @@ h2 {
 }
 
 /* =============================== */
-/* ADAPTATION RESPONSIVE TABLETTE */
+/* ADAPTATION RESPONSIVE OVERALL */
 /* =============================== */
 @media screen and (max-width: 768px) {
   .founder {
@@ -181,7 +181,7 @@ h2 {
 }
 
 /* =============================== */
-/* ADAPTATION RESPONSIVE MOBILE   */
+/* ADAPTATION RESPONSIVE NEWSLETTER   */
 /* =============================== */
 @media screen and (max-width: 600px) {
   .invite-img img {

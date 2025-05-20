@@ -1,99 +1,136 @@
+/* ==================================================================================
+   Variables globales : palette de couleurs utilisées dans tout le site
+   ================================================================================== */
 :root {
-    --white: #fff;
-    --background: #0B0B0B;
-    --menu: #000000;
-    --bouton: #FFA909;
-  }
-  /*Pour commencer, on crée des variables pour les couleurs de la page, tout les éléments qui ne sont pas des images déja fait.*/
+  --white: #fff;            /* Blanc pur */
+  --background: #0B0B0B;    /* Noir de fond général */
+  --menu: #000000;          /* Noir pur (utilisé pour le menu/haut de page) */
+  --bouton: #FFA909;        /* Orange vif (boutons, appels à l’action) */
+}
 
+/* ==================================================================================
+   Style général de la page : police globale, fond, marges
+   ================================================================================== */
+body {
+  font-family: "Barlow", sans-serif;  /* Police principale pour tout le site */
+  background-color: var(--background); /* Fond noir défini par la variable */
+  margin: 0;
+  padding: 0;
+}
 
-/*Style de toute la page*/
-
-  body {
-    font-family: "Barlow", sans-serif;
-    background-color: var(--background);
-    margin: 0;
-    padding: 0;
-  }
-
+/* ==================================================================================
+   Liens dans l'en-tête avec effet de survol
+   ================================================================================== */
 header a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  color: white;                              /* Couleur blanche par défaut */
+  text-decoration: none;                     /* Pas de soulignement par défaut */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Animation douce */
 }
 
 header a:hover {
-  color: grey;
-  text-decoration: underline;
+  color: grey;                               /* Devient gris au survol */
+  text-decoration: underline;                /* Soulignement visible */
 }
 
+/* ==================================================================================
+   Icônes réseaux sociaux : effet d'agrandissement au survol
+   ================================================================================== */
 .r-sociaux {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;           /* Animation fluide */
 }
 
 .r-sociaux:hover {
-  transform: scale(1.10);
+  transform: scale(1.10);                    /* Zoom léger au survol */
 }
 
-  button {
-    font-family: "Barlow", sans-serif;
-  }
+/* ==================================================================================
+   Style des boutons et champs de saisie (police uniforme)
+   ================================================================================== */
+button, input {
+  font-family: "Barlow", sans-serif;
+}
 
-  input {
-    font-family: "Barlow", sans-serif;
-  }
-
+/* ==================================================================================
+   Logos / images principales
+   ================================================================================== */
 .logo-header {
   width: 50%;
   height: auto;
 }
 
-
-  h1 {
-    color:var(--white);
-    font-size: 100;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    margin: 70px;
-  }
-
-  h2 {
-    color:var(--white);
-    font-size: 40;
-    font-weight: bold;
-  }
-
-  p {
-    max-width: 600px;
-    margin: 0 auto 60px auto;
-    line-height: 1.6;
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
+.logo {
+  width: 60px;
+  height: auto;
 }
+
+/* ==================================================================================
+   Titres et paragraphes généraux
+   ================================================================================== */
+h1 {
+  color: var(--white);
+  font-size: 100;                   /* Problème : l’unité manque ici (devrait être px) */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 70px;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 40;                    /* Idem : manque unité */
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;                /* Empêche le texte d’être trop large */
+  margin: 0 auto 60px auto;        /* Centrage horizontal + marge basse */
+  line-height: 1.6;                /* Hauteur de ligne confortable */
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ==================================================================================
+   Barre de navigation principale
+   ================================================================================== */
 nav {
-    background-color: #000;
-    padding: 25px;
-    border-bottom: 0.3px solid white; /* Ajoute une fine bordure blanche en bas */
-}
-
-footer {
-  background-color: #000;
+  background-color: #000;           /* Fond noir pour le menu */
   padding: 25px;
-  border-top: 0.3px solid white; /* Ajoute une fine bordure blanche en bas */
+  border-bottom: 0.3px solid white; /* Fine bordure blanche en bas */
 }
 
-.socials {
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;                    /* Organisation horizontale */
+  align-items: center;
+  justify-content: space-between;  /* Répartition égale entre les éléments */
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 20px;                        /* Espace entre les éléments dans un <li> */
+}
+
+nav a {
+  text-decoration: none;           /* Pas de soulignement */
+  color: white;
+  font-size: 18px;
+}
+
+nav img {
   width: 30px;
   height: auto;
-  display: flex;
-  justify-content: flex-end;
-  transition: transform 0.3s ease;
 }
 
-.socials:hover {
-  transform: scale(1.10);
+/* ==================================================================================
+   Pied de page : agencement et réseaux sociaux
+   ================================================================================== */
+footer {
+  background-color: #000;           /* Fond noir */
+  padding: 25px;
+  border-top: 0.3px solid white;   /* Bordure blanche en haut */
 }
 
 footer ul {
@@ -109,43 +146,31 @@ footer ul {
   height: auto;
 }
 
-/*CSS du menu*/
-nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav li {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-nav img {
-    width: 30px;
-    height: auto;
-}
-  
-.logo {
-  width: 60px;
+.socials {
+  width: 30px;
   height: auto;
+  display: flex;
+  justify-content: flex-end;
+  transition: transform 0.3s ease;
 }
+
+.socials:hover {
+  transform: scale(1.10);
+}
+
+/* ==================================================================================
+   Liste globale (protection supplémentaire contre marges internes) 
+   ================================================================================== */
 ul {
   padding: 0px;
- }
+}
 
+/* ==================================================================================
+   Responsive : réduction du logo sur petit écran (mobile)
+   ================================================================================== */
 @media (max-width: 600px) {
   .logo {
-      width: 40px;
+    width: 40px;                   /* Réduction de la taille du logo */
   }
 }
 
